@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/Users/tobibeck/Downloads/warehouse/conf/routes
-// @DATE:Thu May 18 14:51:44 CEST 2017
+// @SOURCE:/Users/tobibeck/htdocs/ssd-project/conf/routes
+// @DATE:Thu May 18 15:05:02 CEST 2017
 
 package router
 
