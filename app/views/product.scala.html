@@ -1,0 +1,26 @@
+@(product: Product)
+@main(product.getName) {
+    <div class="row back">
+        <div class="col-xs-12">
+            <a href="@routes.ProductController.list()"><i class="fa fa-caret-left" aria-hidden="true"></i> Zurück</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>@product.getName()</h1>
+            <span class="ean"><b>EAN:</b> @product.getEan</span>
+        </div>
+    </div>
+    <div class="row product-detail">
+        <div class="col-xs-6">
+            <img src="@routes.Assets.versioned(product.getImagePath())" class="img-responsive" />
+        </div>
+        <div class="col-xs-6">
+            <b>Beschreibung:</b>
+            <div class="description">
+            @product.getDescription()
+            </div>
+        </div>
+    </div>
+}
