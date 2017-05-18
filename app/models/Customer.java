@@ -21,7 +21,7 @@ public class Customer {
     private String email;
     private String company;
 
-    public Customer(long ID, String name, String address, String phone, String email, String company) {
+    public Customer(long ID, String name, String address, String phone, String email, String company) extends Model {
         this.ID = ID;
         this.name = name;
         this.address = address;

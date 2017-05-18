@@ -10,7 +10,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-public class Task {
+public class Task extends Model{
 
     @Id
     @Column(name="task_id")

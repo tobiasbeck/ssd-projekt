@@ -10,7 +10,7 @@ import java.util.List;;
  * Created by tobibeck on 18.05.17.
  */
 @Entity
-public class Project {
+public class Project extends Model{
 
     @Id
     @Column(name="project_id")
