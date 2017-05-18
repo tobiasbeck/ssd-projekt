@@ -1,0 +1,4 @@
+[debug] Copy resource mappings: 
+[debug] 	(/Users/tobibeck/htdocs/ssd-project/conf/application.conf,/Users/tobibeck/htdocs/ssd-project/target/scala-2.11/classes/application.conf)
+[debug] 	(/Users/tobibeck/htdocs/ssd-project/conf/logback.xml,/Users/tobibeck/htdocs/ssd-project/target/scala-2.11/classes/logback.xml)
+[debug] 	(/Users/tobibeck/htdocs/ssd-project/conf/routes,/Users/tobibeck/htdocs/ssd-project/target/scala-2.11/classes/routes)
