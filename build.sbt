@@ -1,5 +1,5 @@
-name := """warehouse"""
-organization := "at.beyondit"
+name := """wverwaltung"""
+organization := "Adelsberger,Beck"
 
 version := "1.0-SNAPSHOT"
 

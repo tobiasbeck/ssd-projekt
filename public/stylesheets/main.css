@@ -23,21 +23,18 @@ a:hover{
     text-decoration: none;
 }
 
-.btn{
-    background-color: #448AFF;
-}
-
 .header{
     height: 80px;
-    background-color: #AFB42B;
+    background-color: #9999ff;
     color: #ffffff;
     padding-left: 30px;
+    margin-bottom: 30px;
 }
 
 .navigation{
     padding-left: 30px;
     padding-top: 30px;
-    background-color: #CDDC39;
+    background-color: #666699;
     min-height: 89vh !important;
 }
 
@@ -49,17 +46,36 @@ a:hover{
 
 }
 
+.product-detail{
+    margin-top: 25px;
+}
+
+.back{
+    margin-top: 5px;
+}
+
+.add-item{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
 .new-holder{
     margin-top: 25px;
 }
 
 .footer{
     height: 50px;
-    background-color: #AFB42B;
+    background-color: #9999ff;
     color: #ffffff;
     line-height: 50px;
     padding-left: 30px;
     padding-right: 30px;
+    margin-top: 30px;
+    position:fixed;
+    left:0px;
+    bottom:0px;
+
+    width:100%
 }
 
 .right-footer{
