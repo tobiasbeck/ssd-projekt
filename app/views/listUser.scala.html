@@ -23,7 +23,7 @@
                             <td>@user.getPosition()</td>
                             <td>
                                 <a href="@routes.FormController.addUser()" class="btn btn-default"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                <a href="@routes.FormController.addUser()" class="btn btn-danger"><i class="fa fa-minus" aria-hidden="true"></i></a>
+                                <a href="@routes.UserController.delete(user.getId())" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></a>
                             </td>
 
 
@@ -31,5 +31,5 @@
                     }
     }
 
-    <a href="@routes.FormController.addUser()" class="btn btn-danger"><i class="fa fa-plus" aria-hidden="true"></i> Neuen Nutzer erstellen</a>
+    <a href="@routes.FormController.addUser()" class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i> Neuen Nutzer erstellen</a>
 }

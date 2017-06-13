@@ -27,12 +27,17 @@ public class UserController {
 
 
         user.save();
-        return  redirect(routes.HomeController.index());
+        return  redirect(routes.UserController.list());
     }
 
 
     public Result list(){
         List<User> userList = User.find.all();
         return ok(views.html.listUser.render(userList));
+    }
+
+    public Result delete(Long id){
+        User.find.byId(id).delete();
+        return redirect(routes.UserController.list());
     }
 }
