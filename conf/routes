@@ -8,11 +8,13 @@ GET     /                           controllers.HomeController.index
 #FORMS
 GET     /user/add                   controllers.FormController.addUser()
 GET     /customer                   controllers.FormController.addCustomer()
+GET     /user/:id/edit              controllers.FormController.editUser(id: Long)
 
 #USER
 POST    /user/add                   controllers.UserController.create()
 GET     /user                       controllers.UserController.list()
 GET     /user/:id/delete            controllers.UserController.delete(id: Long)
+PUT     /user/:id/update            controllers.UserController.update(id: Long)
 
 #CUSTOMER
 

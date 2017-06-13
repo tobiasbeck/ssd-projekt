@@ -22,6 +22,14 @@ public class FormController {
         return ok(views.html.addUser.render(userForm));
     }
 
+    public Result editUser(Long id){
+        User user = User.find.byId(id);
+        Form<User> userForm = formFactory.form(User.class);
+        userForm = userForm.fill(user);
+        //System.out.println(userForm.get());
+        return ok(views.html.editUser.render(userForm,user));
+    }
+
     public Result addCustomer(){
         Form<Customer> customerForm = formFactory.form(Customer.class);
         return ok();

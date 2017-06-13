@@ -40,4 +40,9 @@ public class UserController {
         User.find.byId(id).delete();
         return redirect(routes.UserController.list());
     }
+
+    public Result update(Long id){
+
+        return redirect(routes.UserController.list());
+    }
 }
