@@ -21,4 +21,9 @@ public class FormController {
         Form<User> userForm = formFactory.form(User.class);
         return ok(views.html.addUser.render(userForm));
     }
+
+    public Result addCustomer(){
+        Form<Customer> customerForm = formFactory.form(Customer.class);
+        return ok();
+    }
 }
