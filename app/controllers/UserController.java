@@ -7,6 +7,8 @@ import play.mvc.Result;
 
 import javax.inject.Inject;
 
+import java.util.List;
+
 import static play.mvc.Results.ok;
 import static play.mvc.Results.redirect;
 
@@ -26,5 +28,11 @@ public class UserController {
 
         user.save();
         return  redirect(routes.HomeController.index());
+    }
+
+
+    public Result list(){
+        List<User> userList = User.find.all();
+        return ok(views.html.listUser.render(userList));
     }
 }

@@ -1,6 +1,6 @@
 @(userForm:Form[User])
 @main("Neuer Benutzer"){
-    <h1>Neuer Benutzer</h1>
+    <h1>Benutzer anlegen</h1>
     @helper.form(action = routes.UserController.create()){
         @helper.inputText(userForm("email"), 'id -> "email", '_label -> "E-Mail", 'class -> "form-control")
         @helper.inputPassword(userForm("password"),'id-> "password", '_label -> "Passwort", 'class -> "form-control")

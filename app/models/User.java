@@ -56,4 +56,12 @@ public class User extends Model {
     public void setPosition(String position) {
         this.position = position;
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 }
