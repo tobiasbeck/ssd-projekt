@@ -19,6 +19,6 @@ public class FormController {
 
     public Result addUser(){
         Form<User> userForm = formFactory.form(User.class);
-        return ok(views.html.nutzerErstellen.render(userForm));
+        return ok(views.html.addUser.render(userForm));
     }
 }

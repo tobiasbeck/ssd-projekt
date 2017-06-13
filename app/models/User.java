@@ -2,10 +2,19 @@ package models;
 
 import com.avaje.ebean.Model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 /**
  * Created by tobibeck on 13.06.17.
  */
+@Entity()
 public class User extends Model {
+
+    @Id
+    @Column(name="user_id")
+    private Long id;
 
     private String email;
     private String password;
