@@ -1,29 +1,77 @@
 package models;
 
 import com.avaje.ebean.Model;
-import com.sun.javafx.beans.IDProperty;
 
 import javax.persistence.*;
-import java.util.List;;
 
 /**
- * Created by tobibeck on 18.05.17.
+ * Created by Georg on 18.05.2017.
  */
 @Entity
-public class Project extends Model{
-
+public class Project extends Model
+{
     @Id
     @Column(name="project_id")
     private long id;
 
     private String name;
     private String description;
+    
+    @ManyToOne
+    private User user;
+    
+    
+    public User getUser()
+    {
+        return user;
+    }
+    
+    public void setUser(User user)
+    {
+        this.user = user;
+    }
+    
+    public static Finder<String, Project> find = new Finder<String, Project>(Project.class);
 
-    /*@OneToMany(mappedBy = "User")
-    private User controller;*/
+    public long getId()
+    {
+        return id;
+    }
 
+    public void setId(long id)
+    {
+        this.id = id;
+    }
 
+    public String getName()
+    {
+        return name;
+    }
 
+    public void setName(String name)
+    {
+        this.name = name;
+    }
 
+    public String getDescription()
+    {
+        return description;
+    }
 
+    public void setDescription(String description)
+    {
+        this.description = description;
+    }
+
+    public Project( String name, String description)
+    {
+
+        this.name = name;
+        this.description = description;
+    }
+
+    public Project()
+    {
+
+    }
 }

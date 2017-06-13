@@ -6,8 +6,7 @@
         <entry key="root">
           <value>
             <ProjectSettingsEntry>
-              <option name="sourceDir" value="$PROJECT_DIR$/app" />
-              <option name="confDir" value="$PROJECT_DIR$/app" />
+              <option name="confDir" value="D:\FH\Software\ServerseitigProjekt\app" />
               <option name="templateImports">
                 <list>
                   <option value="models._" />
@@ -32,7 +31,7 @@
                   <option value="play.libs.F" />
                 </list>
               </option>
-              <option name="uri" value="$PROJECT_DIR$" />
+              <option name="uri" value="/D:/FH/Software/ServerseitigProjekt" />
             </ProjectSettingsEntry>
           </value>
         </entry>

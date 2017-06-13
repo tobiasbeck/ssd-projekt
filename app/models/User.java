@@ -2,67 +2,96 @@ package models;
 
 import com.avaje.ebean.Model;
 
+import javax.persistence.*;
+import java.util.List;
+
 /**
- * Created by User on 18.05.2017.
+ * Created by Georg on 18.05.2017
  */
-public class User extends Model{
+@Entity
+public class User extends Model {
+    @Id
+    @Column(name="user_id")
+    private Long id;
 
+    private String email;
+    private String passoword;
+    private String role;
+    private String firstname;
+    private String lastname;
 
+    public static Finder<String, User> find = new Finder<String, User>(User.class);
 
-    private String id;
-        private String email;
-        private String password;
-        private String role;
-        private String name;
-
-        public User(String email, String password, String role, String name) {
-            this.email = email;
-            this.password = password;
-            this.role = role;
-            this.name = name;
-        }
-
-        public static Finder<Long, User> find = new Finder<Long, User>(User.class);
-
-        public String getId() {
-            return id;
-        }
-
-        public void setId(String id) {
-            this.id = id;
-        }
-
-        public String getEmail() {
-            return email;
-        }
-
-        public void setEmail(String email) {
-            this.email = email;
-        }
-
-        public String getPassword() {
-            return password;
-        }
-
-        public void setPassword(String password) {
-            this.password = password;
-        }
-
-        public String getRole() {
-            return role;
-        }
-
-        public void setRole(String role) {
-            this.role = role;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
+    public Long getId()
+    {
+        return id;
     }
 
+    public void setId(Long id)
+    {
+        this.id = id;
+    }
+
+    public String getEmail()
+    {
+        return email;
+    }
+
+    public void setEmail(String email)
+    {
+        this.email = email;
+    }
+
+    public String getPassword()
+    {
+        return passoword;
+    }
+
+    public void setPassword(String passoword)
+    {
+        this.passoword = passoword;
+    }
+
+    public String getRole()
+    {
+        return role;
+    }
+
+    public void setRole(String role)
+    {
+        this.role = role;
+    }
+
+    public String getFirstname()
+    {
+        return firstname;
+    }
+
+    public void setFirstname(String firstname)
+    {
+        this.firstname = firstname;
+    }
+
+    public String getLastname()
+    {
+        return lastname;
+    }
+
+    public void setLastname(String lastname)
+    {
+        this.lastname = lastname;
+    }
+
+    public User(String email, String passoword, String role, String firstname, String lastname)
+    {
+        this.email = email;
+        this.passoword = passoword;
+        this.role = role;
+        this.firstname = firstname;
+        this.lastname = lastname;
+    }
+
+    public User()
+    {
+    }
 }

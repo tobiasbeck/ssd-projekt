@@ -1,26 +1,16 @@
-@(product: Product)
-@main(product.getName) {
-    <div class="row back">
-        <div class="col-xs-12">
-            <a href="@routes.ProductController.list()"><i class="fa fa-caret-left" aria-hidden="true"></i> Zurück</a>
-        </div>
-    </div>
+@(userList: List[User])
 
-    <div class="row">
-        <div class="col-xs-12">
-            <h1>@product.getName()</h1>
-            <span class="ean"><b>EAN:</b> @product.getEan</span>
-        </div>
-    </div>
-    <div class="row product-detail">
-        <div class="col-xs-6">
-            <img src="@routes.Assets.versioned(product.getImagePath())" class="img-responsive" />
-        </div>
-        <div class="col-xs-6">
-            <b>Beschreibung:</b>
-            <div class="description">
-            @product.getDescription()
+@main("Produkte") {
+    <h1>Produkte</h1>
+    @if(userList.size() > 0) {
+        @for(user <- userList) {
+            <div class="warehouse-item">
+            @user
             </div>
+        }
+    } else {
+        <div class="warehouse-item">
+            Kein Produkt vorhanden
         </div>
-    </div>
+    }
 }

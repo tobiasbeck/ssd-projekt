@@ -23,6 +23,10 @@ a:hover{
     text-decoration: none;
 }
 
+.btn{
+    background-color: #448AFF;
+}
+
 .header{
     height: 80px;
     background-color: #AFB42B;
@@ -43,19 +47,6 @@ a:hover{
 
 .content{
 
-}
-
-.product-detail{
-    margin-top: 25px;
-}
-
-.back{
-    margin-top: 5px;
-}
-
-.add-item{
-    margin-top: 15px;
-    margin-bottom: 15px;
 }
 
 .new-holder{
