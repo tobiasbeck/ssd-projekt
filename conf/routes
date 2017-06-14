@@ -7,20 +7,21 @@ GET     /                           controllers.HomeController.index
 
 #FORMS
 GET     /user/add                   controllers.FormController.addUser()
-GET     /customer                   controllers.FormController.addCustomer()
+GET     /customer/add               controllers.FormController.addCustomer()
 GET     /user/:id/edit              controllers.FormController.editUser(id: Long)
 
 #USER
 POST    /user/add                   controllers.UserController.create()
 GET     /user                       controllers.UserController.list()
 GET     /user/:id/delete            controllers.UserController.delete(id: Long)
-PUT     /user/:id/update            controllers.UserController.update(id: Long)
+#Used post since the html form does not allow put requests
+POST     /user/:id/update            controllers.UserController.update(id: Long)
 
 #CUSTOMER
 
 GET     /customer                   controllers.CustomerController.list()
-POST    /customer/                  controllers.CustomerController.create()
-GET     /deletecustomer/:id         controllers.CustomerController.delete(id: Long)
+POST    /customer/add               controllers.CustomerController.create()
+GET     /customer/:id/delete        controllers.CustomerController.delete(id: Long)
 PUT     /customer/:id               controllers.CustomerController.update(id: Long)
 
 # Map static resources from the /public folder to the /assets URL path

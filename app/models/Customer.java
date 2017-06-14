@@ -14,6 +14,7 @@ public class Customer extends Model {
     @Id
 
     @Column
+    public Long id;
     public String firstname;
     public String lastname;
     public String company;
@@ -29,6 +30,20 @@ public class Customer extends Model {
         this.email = email;
         this.phone = phone;
     }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", company='" + company + '\'' +
+                ", address='" + address + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                '}';
+    }
+
+    public static Finder<Long, Customer> find = new Finder<Long, Customer>(Customer.class);
 
     public String getFirstname() {
         return firstname;
@@ -76,5 +91,13 @@ public class Customer extends Model {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

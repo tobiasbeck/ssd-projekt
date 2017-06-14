@@ -30,8 +30,12 @@ public class FormController {
         return ok(views.html.editUser.render(userForm,user));
     }
 
+    public Result updateCustomer(Long id) {
+        return ok();
+    }
+
     public Result addCustomer(){
         Form<Customer> customerForm = formFactory.form(Customer.class);
-        return ok();
+        return ok(views.html.addCustomer.render(customerForm));
     }
 }

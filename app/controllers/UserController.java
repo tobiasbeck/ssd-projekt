@@ -42,7 +42,15 @@ public class UserController {
     }
 
     public Result update(Long id){
-
+        Form<User> form = formFactory.form(User.class);
+        User user = form.bindFromRequest().get();
+        User oldUser = User.find.byId(id);
+        if(user!=null) {
+            oldUser.setEmail(user.getEmail());
+            oldUser.setName(user.getName());
+            oldUser.setPosition(user.getPosition());
+        }
+        oldUser.update();
         return redirect(routes.UserController.list());
     }
 }
