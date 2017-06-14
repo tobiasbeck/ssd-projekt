@@ -8,6 +8,7 @@ import play.mvc.Result;
 import javax.inject.Inject;
 
 import static play.mvc.Results.*;
+import java.util.List;
 
 /**
  * Created by tobibeck on 13.06.17.
@@ -37,5 +38,13 @@ public class FormController {
     public Result addCustomer(){
         Form<Customer> customerForm = formFactory.form(Customer.class);
         return ok(views.html.addCustomer.render(customerForm));
+    }
+
+    public Result addProject(){
+        Form<Project> form = formFactory.form(Project.class);
+        List<Customer> customer = Customer.find.all();
+        List<User> users = User.find.all();
+
+        return ok(views.html.addProject.render(form,customer,users))
     }
 }
